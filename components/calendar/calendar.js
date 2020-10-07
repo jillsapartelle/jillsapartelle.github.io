@@ -7,23 +7,25 @@
 
 	const template = document.createElement('template');
 	template.innerHTML = `
-		<div class="month">
+		<div class="month panel">
 			<div class="month-title">
 				<span>September</span> <span>2020</span>
 			</div>
-			<table>
-				<thead>
-					<tr> <th>Su</th> <th>Mo</th> <th>Tu</th> <th>We</th> <th>Th</th> <th>Fr</th> <th>Sa</th> </tr>
-				</thead>
-				<tbody>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-					<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
-				</tbody>
-			</table>
+			<div class="month-table">
+				<table>
+					<thead>
+						<tr> <th>Su</th> <th>Mo</th> <th>Tu</th> <th>We</th> <th>Th</th> <th>Fr</th> <th>Sa</th> </tr>
+					</thead>
+					<tbody>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+						<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+					</tbody>
+				</table>
+			</div>
 		</div>`;
 
 	class Calendar extends HTMLElement{
@@ -63,8 +65,6 @@
 		
 		_init(val){
 			this._initCss();
-			this._initState(val);
-			
 			this._selectStartDate(this._state.selectedStartDate);
 			this._selectEndDate(this._state.selectedEndDate);
 		}
@@ -367,12 +367,10 @@
 		}
 		
 		//----- public methods
-		
+
 		// param: {year, month, selectedStartDate, selectedEndDate, currentDate}
 		init(param){	
-		
-			this._init(param);	
-			this._render();							
+			this._initState(param);								
 		}
 
 		// param: {startDate, endDate}
@@ -404,6 +402,15 @@
 			}
 		}
 		
+		
+		set value(val){
+			this.shouldRender = false;
+			this.year = val.getFullYear();
+			this.shouldRender = true;
+			this.month = val.getMonth();
+		}
+	
+
 		set startDate(val){
 			this._selectStartDate(val);
 		}
@@ -430,6 +437,10 @@
 		
 		get selectedEndDate(){
 			return this._state.selectedEndDate;
+		}
+
+		get value() {
+			return new Date(this._state.year, this._state.month, 1);
 		}
 		
 	}

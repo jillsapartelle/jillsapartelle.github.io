@@ -7,18 +7,32 @@
 	min-width: 308px;
 }
 
-.calendar table{
+calendar-component .month {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	min-width: 308px;
+}
+
+calendar-component .month-table {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+calendar-component .month-table table{
 	border-spacing: 0;
 }
 
-.calendar th{
+calendar-component .month-table th{
 	text-align: center;
 	width: 3rem;
 	font-weight: normal;
 	padding: 0.5rem;
 }
 
-.calendar td{
+calendar-component .month-table td{
 	text-align: center;
 }
 

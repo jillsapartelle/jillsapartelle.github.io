@@ -121,8 +121,8 @@ window.hotelres.calendarController = (function(){
         _updateSelectedStartDate();
         _updateSelectedEndDate();
 
-        _initModalCalendars();
-        _showModalCalendars();
+        //_initModalCalendars();
+        //_showModalCalendars();
     }
 
     function onSelectCheckOutDate(evt) {
@@ -144,9 +144,9 @@ window.hotelres.calendarController = (function(){
         _modalCalendarsContainer = els.modalCalendarsContainer;
         _modalBackground = els.modalBackground;
 
-        _initModalCalendars();
-        _initCalendarIcons();
-        _addEventListeners();
+        //_initModalCalendars();
+        //_initCalendarIcons();
+        //_addEventListeners();
     }  
     
     return{
