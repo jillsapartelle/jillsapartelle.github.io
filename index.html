@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="components/calendar/calendar.css">
 	<link rel="stylesheet" type="text/css" href="components/calendar_carousel/calendar_carousel.css">
 	<link rel="stylesheet" type="text/css" href="components/calendar_icon/calendar_icon.css">
-	<link rel="stylesheet" type="text/css" href="components/selection_grid/selection_grid.css">
 	<link rel="stylesheet" type="text/css" href="css/modal_calendars.css">
 	
 
@@ -18,12 +17,16 @@
 	<script  src="components/calendar/calendar.js"></script>
 	<script  src="components/calendar_icon/calendar_icon.js"></script>
 	<script src="components/calendar_carousel/calendar_carousel.js"></script>
-	<!--<script  src="components/selection_grid/selection_grid.js"></script>-->
 	
 </head>
 <body>
 
-	<header>Jill's Residence Tagaytay</header>
+	<header>
+		<div class="banner-container">
+			<div class="banner">Jill's Apartelle</div>
+			<div class="location">Tagaytay</div>
+		</div>
+	</header>
 
 	<main>
 			<section class="start-end-calendar-container" ><!-- calendar_controller-->
@@ -36,22 +39,6 @@
 					<span id="checkOutSelect">Check Out</span>
 				</div>
 			</section>
-
-			<div id="modalBackground" class="hidden">&nbsp;</div>
-			<!--
-			<div id="modalCalendarsContainer" class="hidden">
-
-				<div id="calendarNavigation">
-					<button id="btnCalendarPrev">Previous</button>
-					<button id="btnCalendarNext">Next</button>
-				</div>
-
-				<section class="modal-calendars">
-					<calendar-component id="calStart" class="calendar panel"></calendar-component>
-					<calendar-component id="calEnd" class="calendar panel"></calendar-component>
-				</section>
-			</div>
-			-->
 
 			<calendar-carousel-component></calendar-carousel-component>
 

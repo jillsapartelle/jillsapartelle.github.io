@@ -1,3 +1,57 @@
-.calendar-carousel {
+calendar-carousel-component {
     display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+calendar-carousel-component .prev-next {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@font-face {
+    font-family: arrow;
+    src: url("../../fonts/arrow_7.ttf");
+}
+
+calendar-carousel-component .prev-next button {
+    border: 0;
+    background: 0;
+
+    font-family: arrow;
+    font-size: 2rem;
+}
+
+calendar-carousel-component .prev-next .prev {
+    transform: rotate(-90deg);
+}
+
+calendar-carousel-component .prev-next .next {
+    transform: rotate(90deg);
+}
+
+calendar-carousel-component .close-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+calendar-carousel-component .close-container > button {
+    border: 0;
+    background: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+calendar-carousel-component .calendars {
+    margin-top: -1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: 27.5rem;
+    overflow: hidden;      
 }

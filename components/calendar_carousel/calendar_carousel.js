@@ -4,7 +4,10 @@
 (function(){
 
         const template = document.createElement('template');
-        template.innerHTML = `<div class="calendar-carousel"></div>`;
+        template.innerHTML = `
+            <div class="close-container"><button>x</button></div>
+            <div class="prev-next"><button class="prev">&#92;</button><button class="next">&#92;</button></div>
+            <div class="calendars"></div>`;
 
         
 
@@ -18,14 +21,23 @@
                     ,endDate: null
                     ,visibleCalendar: null
                 };
+
             }
 
             connectedCallback() {
+
+                this.appendChild(template.content.cloneNode(true));
 
                 if( ! this._state.visibleCalendar){
                     this._state.visibleCalendar = new Date();
                 }
 
+                this._els = {
+                     calendars: this.querySelector('.calendars')
+                    ,close: this.querySelector('.close')
+                    ,prev: this.querySelector('.prev')
+                    ,next: this.querySelector('.next')
+                };
 
                 this._reset();
                 this._addEventListeners();
@@ -52,28 +64,31 @@
             _reset() {
                 // add the current month's calendar
                 let dte = new Date();
-                this.appendChild(this._newCalendar(dte));
+                let c = this._els.calendars;
+                c.appendChild(this._newCalendar(dte));
 
                 this._state.visibleCalendar = dte;
 
                 // add the next 2 month's calendar
                 for(let i = 0; i < 2; i++) {
                     dte = dte.nextMonth();
-                    this.appendChild(this._newCalendar(dte));
+                    c.appendChild(this._newCalendar(dte));
                 }
             }
 
             _previous() {
                 if(this._state.visibleCalendar.isCurrentMonth()) return;
 
+                let c = this._els.calendars;
+
                 // add a calendar at the start of the carousel
-                if(this.children.length > 0) {
-                    this.insertBefore(this._newCalendar(this._state.visibleCalendar.previousMonth()), this.firstChild);
+                if(c.children.length > 0) {
+                    c.insertBefore(this._newCalendar(this._state.visibleCalendar.previousMonth()), c.firstChild);
                 }
 
                 // remove the last child
-                if(this.lastChild) {
-                    this.lastChild.remove();
+                if(c.lastChild) {
+                    c.lastChild.remove();
                 }
 
                 this._state.visibleCalendar = this._state.visibleCalendar.previousMonth();
@@ -81,17 +96,19 @@
 
             _next() {
                 
+                let c = this._els.calendars;
+
                 // add a calendar to the end of the carousel
-                let lastCalendar = this.lastChild;
+                let lastCalendar = c.lastChild;
                 if( ! lastCalendar) {
                     return;
                 }
 
-                this.appendChild(this._newCalendar(lastCalendar.value.nextMonth()));
+                c.appendChild(this._newCalendar(lastCalendar.value.nextMonth()));
 
                 // remove the first calendar
-                if(this.firstChild) {
-                    this.firstChild.remove();
+                if(c.firstChild) {
+                    c.firstChild.remove();
                 }
 
                 this._state.visibleCalendar = this._state.visibleCalendar.nextMonth();
