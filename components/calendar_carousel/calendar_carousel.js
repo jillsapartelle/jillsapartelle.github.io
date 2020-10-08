@@ -5,8 +5,8 @@
 
         const template = document.createElement('template');
         template.innerHTML = `
-            <div class="close-container"><button>x</button></div>
-            <div class="prev-next"><button class="prev">&#92;</button><button class="next">&#92;</button></div>
+            <div class="close-container"><button class="close">x</button></div>
+            <div class="prev-next"><button class="prev">🡄</button><button class="next">🡆</button></div>
             <div class="calendars"></div>`;
 
         

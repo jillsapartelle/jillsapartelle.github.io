@@ -8,27 +8,28 @@ calendar-carousel-component .prev-next {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-}
-
-@font-face {
-    font-family: arrow;
-    src: url("../../fonts/arrow_7.ttf");
+    margin-left: -25px;
 }
 
 calendar-carousel-component .prev-next button {
     border: 0;
     background: 0;
-
-    font-family: arrow;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-calendar-carousel-component .prev-next .prev {
-    transform: rotate(-90deg);
-}
-
-calendar-carousel-component .prev-next .next {
-    transform: rotate(90deg);
+calendar-carousel-component .prev-next button::before {
+    content: "";
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    left: 23px;
+    box-shadow: 0px 3px 5px -2px gray, 0px -1px 3px -3px gray;
+    background-color: white;
+    z-index: -1;
 }
 
 calendar-carousel-component .close-container {
