@@ -3,3 +3,16 @@ calendar.js
 
 content
 - things to do in tagaytay
+- location in google map
+- address
+
+
+https://blog.usejournal.com/how-to-use-google-sheets-as-a-cms-or-a-database-f9d8e736fdce
+
+
+Google sheets
+https://docs.google.com/spreadsheets/d/1okwmV9JjPYHWboVxCwseQDow8AS4fCmuJlM2a5rv_pQ/edit?usp=sharing
+
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRDkKZ5jP71Mp54TTip0S8f0jjPSJlQS4LeAu16ZbzODxYbb2szgyBOgiNb7oMnCEinQV64MFdSHpIZ/pubhtml
+
+https://spreadsheets.google.com/feeds/cells/1okwmV9JjPYHWboVxCwseQDow8AS4fCmuJlM2a5rv_pQ/1/public/full?alt=json

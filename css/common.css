@@ -30,6 +30,12 @@ html, body{
 	overflow-x: hidden;
 }
 
+/*----- Variables -----*/
+:root {
+	--calendar-width: 22.5rem;
+	--calendar-height: 14.5rem;	
+}
+
 body > header, body > main, body > footer {
 	width: 100%;
 	margin: 0 auto;

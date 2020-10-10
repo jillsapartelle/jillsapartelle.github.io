@@ -8,13 +8,26 @@ calendar-carousel-component .prev-next {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: -25px;
+    width: 22.5rem;
 }
 
 calendar-carousel-component .prev-next button {
-    border: 0;
-    background: 0;
-    font-size: 1.5rem;
+    border: solid black;
+    border-width: 0 0.35rem 0.35rem 0;
+    display: inline-block;
+    padding: 3px;
+    width: 1rem;
+    height: 1rem;
+}
+
+calendar-carousel-component .prev-next .prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+calendar-carousel-component .prev-next .next {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 calendar-carousel-component .prev-next button::before {
@@ -53,6 +66,6 @@ calendar-carousel-component .calendars {
     flex-wrap: wrap;
     justify-content: center;
 
-    height: 27.5rem;
+    height: calc((2 * var(--calendar-height)) - 5px);
     overflow: hidden;      
 }

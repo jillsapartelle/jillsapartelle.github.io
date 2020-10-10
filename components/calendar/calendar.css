@@ -1,5 +1,9 @@
 
 /*----- calendar -----*/
+calendar-component {
+	width: var(--calendar-width);
+    height: var(--calendar-height);	
+}
 
 calendar-component .month {
 	display: flex;
