@@ -28,12 +28,12 @@ html, body{
 	font-family: TitilliumWebRegular;
 	font-size: 14px;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /*----- Variables -----*/
 :root {
 	--calendar-width: 22.5rem;
-	--calendar-height: 14.5rem;	
 }
 
 body > header, body > main, body > footer {

@@ -11,7 +11,7 @@
        ,modalBtnClose: d.getElementById('modalBtnClose')
    }, true);
    *****/
-
+   /*****
     hotelres.calendarController.init({
          calStart: d.getElementById('calStart')
         ,calEnd: d.getElementById('calEnd')
@@ -24,6 +24,7 @@
         ,checkInContainer: d.getElementById('checkInContainer')
         ,checkOutContainer: d.getElementById('checkOutContainer')
     });
+    *****/
 
 
          

@@ -1,7 +1,59 @@
 //  dependencies
 //    js/enums.js
-//    controllers/modal_controller.js
 
+
+(function(){
+
+    let d = document;
+
+    let els = {
+         carousel: d.getElementById('calendarCarousel')
+        ,calIconCheckIn: d.getElementById('calIconCheckIn')
+        ,checkInSelect: d.getElementById('checkInSelect')
+        ,calIconCheckOut: d.getElementById('calIconCheckOut')
+        ,checkOutSelect: d.getElementById('checkOutSelect')
+    };
+
+    function addEventListeners() {
+        els.carousel.addEventListener('startDateSelected', onStartDateSelected);
+        els.carousel.addEventListener('endDateSelected', onEndDateSelected);
+    }
+
+    function dateString(dte) {
+        return `${DAY_STRING[dte.getDay()]} ${MONTH_STRING[dte.getMonth()]} ${dte.getDate()} ${dte.getFullYear()}`;
+    }
+
+    //----- event listeners
+    function onStartDateSelected(evt) {
+        els.calIconCheckIn.value = evt.detail;
+        els.calIconCheckOut.value = null;
+
+        setDateDisplay(els.checkInSelect, evt.detail);
+    }
+
+    function onEndDateSelected(evt) {
+        els.calIconCheckOut.value = evt.detail;
+        setDateDisplay(els.checkOutSelect, evt.detail);
+    }
+
+    function setDateDisplay(el, dte) {
+        if(el === els.checkInSelect) {
+            el.innerText = dte ? dateString(dte) : "Check In";
+        } else {
+            el.innerText = dte ? dateString(dte) : "Check Out";
+        }
+    }
+
+
+    function init() {
+        addEventListeners();
+    }
+
+    init();
+
+})();
+
+/***** 
 window.hotelres.calendarController = (function(){
     
     //----- state -----
@@ -149,9 +201,7 @@ window.hotelres.calendarController = (function(){
         //_addEventListeners();
     }  
     
-    return{
-        init: init
-    };
 
 })();
+*****/
 

@@ -20,6 +20,7 @@ calendar-carousel-component .prev-next button {
     height: 1rem;
     background-color: white;
     outline: none;
+    cursor: pointer;
 }
 
 calendar-carousel-component .prev-next-container {
@@ -29,12 +30,10 @@ calendar-carousel-component .prev-next-container {
 
 calendar-carousel-component .prev-next .prev {
     transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
 }
 
 calendar-carousel-component .prev-next .next {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
 }
 
 calendar-carousel-component .prev-next button::before {
@@ -54,7 +53,7 @@ calendar-carousel-component .close-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-bottom: 5px;
+    margin: 1.25rem 0;
 }
 
 calendar-carousel-component .close-container > button {
@@ -62,6 +61,7 @@ calendar-carousel-component .close-container > button {
     background: none;
     font-weight: bold;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 calendar-carousel-component .calendars {
@@ -69,8 +69,5 @@ calendar-carousel-component .calendars {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-
-    height: calc((2 * var(--calendar-height)) - 5px);
-    overflow: hidden;      
+    justify-content: center;  
 }

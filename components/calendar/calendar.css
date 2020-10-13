@@ -1,8 +1,7 @@
 
 /*----- calendar -----*/
 calendar-component {
-	width: var(--calendar-width);
-    height: var(--calendar-height);	
+	margin: 5px;
 }
 
 calendar-component .month {
@@ -31,10 +30,14 @@ calendar-component .month-table th{
 
 calendar-component .month-table td{
 	text-align: center;
+	cursor: pointer;
+	height: 1.3rem;
+	border: 1px solid white;
 }
 
-.current-date{
-	border: 1px solid lightgray;
+.current-date {
+	text-decoration: underline;
+	font-weight: bolder;
 }
 
 .selected-start-date{

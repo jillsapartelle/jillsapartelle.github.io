@@ -28,6 +28,22 @@ Object.defineProperty(Date.prototype, 'getFirstDayOfMonth', {
 	,configurable: true
 });
 
+Object.defineProperty(Date.prototype, 'startOfMonth', {
+	value: function(){
+		return new Date(this.getFullYear(), this.getMonth(), 1, 0, 0, 0, 0);
+	}
+	,writable: true
+	,configurable: true
+});
+
+Object.defineProperty(Date.prototype, 'clone', {
+	value: function() {
+		return new Date(this.getFullYear(), this.getMonth(), this.getDate(), this.getHours(), this.getMinutes(), this.getSeconds(), this.getMilliseconds());
+	}
+	,writable: true
+	,configurable: true
+});
+
 Object.defineProperty(Date.prototype, 'isCurrentMonth', {
 	value: function(){
 		let now = new Date();
