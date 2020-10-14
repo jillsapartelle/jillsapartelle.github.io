@@ -28,18 +28,22 @@
 	</header>
 
 	<main>
-			<section class="start-end-calendar-container" ><!-- calendar_controller-->
+			<!-- calendar_controller-->
+			
+			<section class="start-end-calendar-container" >
 				<div id="checkInContainer">
 					<calendar-icon-component id="calIconCheckIn" class="calendar-icon"></calendar-icon-component>
 					<span id="checkInSelect">Check In</span>
 				</div>
+
 				<div id="checkOutContainer">
 					<calendar-icon-component id="calIconCheckOut" class="calendar-icon"></calendar-icon-component>
 					<span id="checkOutSelect">Check Out</span>
 				</div>
 			</section>
 
-			<calendar-carousel-component id="calendarCarousel"></calendar-carousel-component>
+			<calendar-carousel-component id="calendarCarousel" class="hidden"></calendar-carousel-component>
+
 
 			<!--
 			<section class="rooms">

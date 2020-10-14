@@ -66,6 +66,12 @@
                 this._els.firstCal.addEventListener('dateSelected', this._onDateSelectedBound);
                 this._els.secondCal.addEventListener('dateSelected', this._onDateSelectedBound);
 
+                this._els.close.addEventListener('click', this._onClose.bind(this));
+
+            }
+
+            _onClose(evt){
+                this.dispatchEvent(new CustomEvent('closeCarousel'));
             }
 
             _onPrevClick(evt) {
@@ -85,10 +91,14 @@
                     this._setEndDate(dte);
                 }
 
+                this._updateCalendarDates();
+
+            }
+
+            _updateCalendarDates() {
                 // update calendars
                 this._els.firstCal.setDates({startDate: this._state.startDate, endDate: this._state.endDate});
                 this._els.secondCal.setDates({startDate: this._state.startDate, endDate: this._state.endDate});
-
             }
 
             _setStartDate(dte) {
@@ -134,18 +144,22 @@
              * @param {Date} val
              */
             set startDate(val) {
-
+                this._state.startDate = val;
+                this._state.endDate = null;
+                this._updateCalendarDates();
             }
 
             /**
              * @param {Date} val
              */
             set endDate(val) {
-
+                this._state.endDate = val;
+                this._updateCalendarDates();
             }
 
             set visibleCalendar(val) {
-                this._setVisibleCalendar(val);
+                this._state.visibleCalendar = val;
+                this._render();
             }
         }
 
