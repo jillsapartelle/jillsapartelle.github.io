@@ -29,7 +29,6 @@
 
 	<main>
 			<!-- calendar_controller-->
-			
 			<section class="start-end-calendar-container" >
 				<div id="checkInContainer">
 					<calendar-icon-component id="calIconCheckIn" class="calendar-icon"></calendar-icon-component>
@@ -45,11 +44,29 @@
 			<calendar-carousel-component id="calendarCarousel" class="hidden"></calendar-carousel-component>
 
 
-			<!--
+			
 			<section class="rooms">
 				<header>Available Rooms</header>
 			</section>
-			-->
+
+			<section class="guest-details">
+				<header>Please enter your details</header>
+				<form>
+					<p>
+						<label for="firstname">First name</label>
+						<input name="firstname" type="text" placeholder="First name">
+					
+						<label for="lastname">Last name</label>
+						<input name="lastname" type="text" placeholder="Last name">
+					</p>
+					<p>	
+						<label for="email">Email</label>
+						<input name="email" type="email" placeholder="Email">
+					</p>
+
+				</form>
+			</section>
+			
 		
 	</main>
 	<footer></footer>
