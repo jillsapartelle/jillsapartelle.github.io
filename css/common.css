@@ -15,6 +15,11 @@
 	src: url('../fonts/TitilliumWeb-Regular.ttf');
 }
 
+@font-face {
+	font-family: TitilliumSemiBold;
+	src: url('../fonts/TitilliumWeb-SemiBold.ttf');
+}
+
 /*----- Reset -----*/
 
 *{
@@ -25,7 +30,7 @@ html, body{
 	height: 100%;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
-	font-family: TitilliumWebRegular;
+	font-family: TitilliumSemiBold;
 	font-size: 14px;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
