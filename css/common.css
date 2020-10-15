@@ -80,6 +80,12 @@ body > header {
 	color: lightblue;
 }
 
+.detail-input {
+	display: flex;
+	flex-direction: column;
+	-ms-flex-align: start;
+}
+
 .hidden {
 	display: none;
 }
