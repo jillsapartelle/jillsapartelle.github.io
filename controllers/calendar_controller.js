@@ -19,6 +19,7 @@
         els.carousel.addEventListener('startDateSelected', onStartDateSelected);
         els.carousel.addEventListener('endDateSelected', onEndDateSelected);
         els.carousel.addEventListener('closeCarousel', onCarouselClose);
+        
         els.checkInSelect.addEventListener('click', onClickCheckInSelect);
         els.checkOutSelect.addEventListener('click', onClickCheckOutSelect);
     }
