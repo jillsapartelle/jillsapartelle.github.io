@@ -118,7 +118,10 @@
             }
 
             _render() {
-                this._els.prev.disabled = this._state.visibleCalendar.isCurrentMonth();
+                this._state.visibleCalendar.isCurrentMonth() ?
+                this._els.prev.classList.add('invisible')
+                : this._els.prev.classList.remove('invisible');
+                //this._els.prev.disabled = this._state.visibleCalendar.isCurrentMonth();
                 
                 this._els.calendars.children[0].value = this._state.visibleCalendar;
                 this._els.calendars.children[1].value = this._state.visibleCalendar.nextMonth();               

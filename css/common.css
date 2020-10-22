@@ -76,20 +76,41 @@ body > header {
 	cursor: pointer;
 }
 
-.start-end-calendar-container #checkInSelect, #checkOutSelect {
+.start-end-calendar-container .noSelectedDate {
 	color: lightblue;
+}
+
+.start-end-calendar-container .withSelectedDate {
+	color: darkblue;
+}
+
+.rooms header {
+	margin-bottom: 2rem;
+}
+
+.guest-details header {
+	margin-bottom: 2rem;
+}
+
+.detail-name {
+	display: flex;
 }
 
 .detail-input {
 	display: flex;
 	flex-direction: column;
-	-ms-flex-align: start;
+
+	flex-grow: 1;
+	margin-bottom: 1.5rem;
 }
 
 .hidden {
 	display: none;
 }
 
+.invisible {
+	visibility: hidden;
+}
 
 section {
 	margin-bottom: 1.25rem;
@@ -103,6 +124,7 @@ section {
 main {
 	max-width: 48rem;
 }
+
 
 
 

@@ -72,3 +72,13 @@ calendar-carousel-component .calendars {
     flex-wrap: wrap;
     justify-content: center;  
 }
+
+
+/* the calendars display in a row */
+@media only screen and (min-width: 42.2rem)
+{
+    calendar-carousel-component .prev-next {
+        width: calc(2 * var(--calendar-width));
+    }
+
+}

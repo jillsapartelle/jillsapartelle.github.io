@@ -74,6 +74,8 @@
         } else {
             el.innerText = dte ? dateString(dte) : "Check Out";
         }
+
+        dte ? el.classList.add('withSelectedDate') : el.classList.remove('withSelectedDate');
     }
 
 
