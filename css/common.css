@@ -15,6 +15,11 @@
 	src: url('../fonts/TitilliumWeb-SemiBold.ttf');
 }
 
+@font-face {
+	font-family: VarelaRound;
+	src: url('../fonts/Varela_Round/VarelaRound-Regular.ttf');	
+}
+
 /*----- Reset -----*/
 
 *{
@@ -24,8 +29,9 @@
 html, body{
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
-	font-family: TitilliumSemiBold;
+	font-family: VarelaRound;
 	font-size: 16px;
+	font-weight: 600;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
@@ -38,6 +44,8 @@ html, body{
 body > header, body > main, body > footer {
 	width: 100%;
 	margin: 0 auto;
+
+	max-width: 48rem;
 }
 
 body > header {
@@ -68,12 +76,16 @@ body > header {
 }
 
 .start-end-calendar-container > div {
-	flex-grow: 1;
+	width: 50%;
 
 	display: flex;
-	border: 1px solid lightblue;
+	/*border: 1px solid lightblue;*/
 	align-items: center;
 	cursor: pointer;
+}
+
+.start-end-calendar-container span {
+	font-size: 0.75rem;
 }
 
 .start-end-calendar-container .noSelectedDate {
@@ -119,10 +131,6 @@ section {
 .panel{
 	border-radius: 0 0 4px 4px;
 	box-shadow: 0px 3px 5px -2px gray, 0px -1px 3px -3px gray; 			
-}
-
-main {
-	max-width: 48rem;
 }
 
 
