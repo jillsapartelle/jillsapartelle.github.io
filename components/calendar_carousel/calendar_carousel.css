@@ -4,12 +4,7 @@ calendar-carousel-component {
     justify-content: center;  
 }
 
-calendar-carousel-component .prev-next {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: var(--calendar-width);
-}
+
 
 calendar-carousel-component .prev-next button {
     border: solid black;
@@ -25,7 +20,8 @@ calendar-carousel-component .prev-next button {
 
 calendar-carousel-component .prev-next-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 calendar-carousel-component .prev-next .prev {
@@ -46,7 +42,6 @@ calendar-carousel-component .prev-next button::before {
     position: relative;
     top: -0.55rem;
     left: -0.55rem;
-    box-shadow: 0px 3px 5px -2px grey, 0px -1px 3px -3px grey;
 }
 
 calendar-carousel-component .close-container {
@@ -78,7 +73,8 @@ calendar-carousel-component .calendars {
 @media only screen and (min-width: 42.2rem)
 {
     calendar-carousel-component .prev-next {
-        width: calc(2 * var(--calendar-width));
+        .width: calc(2 * var(--calendar-width));
     }
+
 
 }
