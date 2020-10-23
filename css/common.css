@@ -1,18 +1,13 @@
 /*----- fonts -----*/
 
 @font-face {
-	font-family: MarckScriptRegular;
-	src: url('../fonts/MarckScript-Regular.ttf');
+	font-family: LobsterRegular;
+	src: url('../fonts/Lobster-Regular.ttf');
 }
 
 @font-face {
 	font-family: SyneRegular;
 	src: url('../fonts/Syne-Regular.ttf');
-}
-
-@font-face {
-	font-family: TitilliumSemiBold;
-	src: url('../fonts/TitilliumWeb-SemiBold.ttf');
 }
 
 @font-face {
@@ -59,27 +54,34 @@ body > header {
 }
 
 .banner {
-	font-family: MarckScriptRegular;
+	font-family: LobsterRegular;
 	font-weight: bold;
 	font-size: 1.5rem;
 	padding-left: 5px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .location {
 	font-family: SyneRegular;
 	font-size: 1rem;
+	margin-top: -5px;
 }
 
 .start-end-calendar-container {
 	display: flex;
-	flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: antiquewhite;
+    padding: 1rem 0;
 }
 
 .start-end-calendar-container > div {
-	width: 50%;
+	width: 10rem;
 
 	display: flex;
-	/*border: 1px solid lightblue;*/
 	align-items: center;
 	cursor: pointer;
 }

@@ -25,7 +25,7 @@
     }
 
     function dateString(dte) {
-        return `${DAY_STRING[dte.getDay()]} ${MONTH_STRING[dte.getMonth()]} ${dte.getDate()} ${dte.getFullYear()}`;
+        return `${DAY_STRING[dte.getDay()]}, ${MONTH_STRING[dte.getMonth()]} ${dte.getDate()} ${dte.getFullYear()}`;
     }
 
     function showCarousel(){
