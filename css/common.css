@@ -44,7 +44,10 @@ body > header, body > main, body > footer {
 }
 
 body > header {
-	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .banner-container {
@@ -70,6 +73,17 @@ body > header {
 	font-size: 1rem;
 	margin-top: -5px;
 	color: goldenrod;
+}
+
+.address {
+	color: #4d4d4d;
+    font-size: 0.3rem;
+    width: 6rem;
+}
+
+.address > div {
+	display: flex;
+	flex-direction: column;
 }
 
 .start-end-calendar-container {
