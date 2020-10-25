@@ -36,6 +36,13 @@ html, body{
 	--calendar-width: 22.5rem;
 }
 
+input {
+	font-family: VarelaRound;
+	border: 1px solid lightgray;
+    border-radius: 0.3rem;
+
+}
+
 body > header, body > main, body > footer {
 	width: 100%;
 	margin: 0 auto;
@@ -137,6 +144,11 @@ body > header {
 	margin-bottom: 1.5rem;
 }
 
+.detail-input:nth-child(1) {
+	padding-right: 1rem;
+	width: 7rem;
+}
+
 .detail-input label {
 	font-size: 0.7rem;
 	margin-bottom: 5px;
@@ -157,6 +169,20 @@ section {
 .panel{
 	border-radius: 0 0 4px 4px;
 	box-shadow: 0px 3px 5px -2px gray, 0px -1px 3px -3px gray; 			
+}
+
+#btnSubmit {
+    font-family: VarelaRound;
+    font-size: 1.5rem;
+    border: 0.3rem solid darkgoldenrod;
+    border-radius: 0.7rem;
+    background-color: goldenrod;
+    color: antiquewhite;
+}
+
+.submit-container {
+	display: flex;
+	justify-content: center;
 }
 
 
