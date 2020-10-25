@@ -62,12 +62,14 @@ body > header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	color: darkgoldenrod;
 }
 
 .location {
 	font-family: SyneRegular;
 	font-size: 1rem;
 	margin-top: -5px;
+	color: goldenrod;
 }
 
 .start-end-calendar-container {
@@ -106,7 +108,7 @@ body > header {
 	margin-bottom: 2rem;
 }
 
-.detail-name {
+.detail {
 	display: flex;
 }
 
@@ -116,6 +118,11 @@ body > header {
 
 	flex-grow: 1;
 	margin-bottom: 1.5rem;
+}
+
+.detail-input label {
+	font-size: 0.7rem;
+	margin-bottom: 5px;
 }
 
 .hidden {
