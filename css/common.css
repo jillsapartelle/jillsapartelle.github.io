@@ -79,8 +79,12 @@ body > header {
 .location {
 	font-family: SyneRegular;
 	font-size: 1rem;
-	margin-top: -5px;
 	color: goldenrod;
+	width: 100%;
+	background-color: black;
+
+	display: flex;
+	justify-content: center;
 }
 
 .address {
@@ -177,7 +181,8 @@ section {
     border: 0.3rem solid darkgoldenrod;
     border-radius: 0.7rem;
     background-color: goldenrod;
-    color: antiquewhite;
+	color: antiquewhite;
+	padding: 0.4rem;
 }
 
 .submit-container {
