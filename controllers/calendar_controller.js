@@ -44,6 +44,8 @@
 
     function onClickCheckInSelect(evt) {
         els.carousel.startDate = null;
+        els.calIconCheckIn.value = null;
+        els.calIconCheckOut.value = null;
         els.carousel.visibleCalendar = (new Date()).startOfMonth();
         setDateDisplay(els.checkOutSelect, null);
         setDateDisplay(els.checkInSelect, null);
@@ -52,6 +54,7 @@
 
     function onClickCheckOutSelect(evt) {
         els.carousel.endDate = null;
+        els.calIconCheckOut.value = null;
         setDateDisplay(els.checkOutSelect, null);
         showCarousel();
     }

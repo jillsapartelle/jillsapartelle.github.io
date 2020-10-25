@@ -48,6 +48,7 @@ body > header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	height: 4rem;
 }
 
 .banner-container {
@@ -90,8 +91,10 @@ body > header {
 	display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: antiquewhite;
-    padding: 1rem 0;
+
+	padding: 1rem 0;
+	border: 0.3rem solid darkgoldenrod;
+    border-radius: 0.5rem;
 }
 
 .start-end-calendar-container > div {
@@ -107,7 +110,7 @@ body > header {
 }
 
 .start-end-calendar-container .noSelectedDate {
-	color: lightblue;
+	color: #b7c7cc;
 }
 
 .start-end-calendar-container .withSelectedDate {
@@ -119,7 +122,7 @@ body > header {
 }
 
 .guest-details header {
-	margin-bottom: 2rem;
+	margin-bottom: 1.25rem;
 }
 
 .detail {
@@ -148,7 +151,7 @@ body > header {
 }
 
 section {
-	margin-bottom: 1.25rem;
+	padding: 0.6rem 0;
 }
 
 .panel{
