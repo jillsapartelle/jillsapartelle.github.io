@@ -19,6 +19,7 @@
 
 *{
 	box-sizing: border-box;
+	outline: none;
 }
 
 html, body{
@@ -104,13 +105,11 @@ body > header {
     justify-content: center;
 
 	padding: 1rem 0;
-	border: 0.3rem solid darkgoldenrod;
-    border-radius: 0.5rem;
 }
 
 .start-end-calendar-container > div {
-	width: 10rem;
-
+	width: 50%;
+	padding: 0 1rem;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
@@ -183,11 +182,13 @@ section {
     background-color: goldenrod;
 	color: antiquewhite;
 	padding: 0.4rem;
+	cursor: pointer;
 }
 
 .submit-container {
 	display: flex;
 	justify-content: center;
+	
 }
 
 

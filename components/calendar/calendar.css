@@ -35,7 +35,9 @@ calendar-component .month-table td{
 	text-align: center;
 	cursor: pointer;
 	height: 2rem;
-	border: 1px solid white;
+
+	user-select: none;
+    -webkit-user-select: none;
 }
 
 .current-date {

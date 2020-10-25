@@ -5,7 +5,7 @@
 
         const template = document.createElement('template');
         template.innerHTML = `
-            <div class="close-container"><button class="close">x</button></div>
+            <div class="close-container"><button class="close"><img src="icons/cancel-24px.svg"></button></div>
             <div class="prev-next-container">
                 <div class="prev-next">
                     <button class="prev"></button>
