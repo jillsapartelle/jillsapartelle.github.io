@@ -76,3 +76,12 @@ Object.defineProperty(Date.prototype, 'previousMonth', {
 	,writable: true
 	,configurable: true
 });
+
+Object.defineProperty(Date.prototype, 'toCustomString', {
+	value: function() {
+		return `${DAY_STRING[this.getDay()]}, ${MONTH_STRING[this.getMonth()]} ${this.getDate()} ${this.getFullYear()}`;
+	}
+	,writable: true
+	,configurable: true
+})
+

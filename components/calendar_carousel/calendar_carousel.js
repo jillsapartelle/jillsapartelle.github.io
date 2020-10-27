@@ -5,7 +5,6 @@
 
         const template = document.createElement('template');
         template.innerHTML = `
-            <div class="close-container"><button class="close"><img src="icons/cancel-24px.svg"></button></div>
             <div class="prev-next-container">
                 <div class="prev-next">
                     <button class="prev"></button>
@@ -57,28 +56,17 @@
             }
 
             disconnectedCallback() {
-                this._removeEventListeners();
             }
 
             //----- private methods
 
             _addEventListeners() {
-                this._onPrevClickBound = this._onPrevClick.bind(this);
-                this._els.prev.addEventListener('click', this._onPrevClickBound);
-
-                this._onNextClickBound = this._onNextClick.bind(this);
-                this._els.next.addEventListener('click', this._onNextClickBound);
+                this._els.prev.addEventListener('click', this._onPrevClick.bind(this));
+                this._els.next.addEventListener('click', this._onNextClick.bind(this));
 
                 this._onDateSelectedBound = this._onDateSelected.bind(this);
                 this._els.firstCal.addEventListener('dateSelected', this._onDateSelectedBound);
                 this._els.secondCal.addEventListener('dateSelected', this._onDateSelectedBound);
-
-                this._els.close.addEventListener('click', this._onClose.bind(this));
-
-            }
-
-            _onClose(evt){
-                this.dispatchEvent(new CustomEvent('closeCarousel'));
             }
 
             _onPrevClick(evt) {
@@ -119,16 +107,10 @@
                 this.dispatchEvent(new CustomEvent('endDateSelected', {detail:dte}));
             }
 
-            _removeEventListeners() {
-                this._els.prev.removeEventListener(this._onPrevClickBound);
-                this._els.next.removeEventListener(this._onNextClickBound);
-            }
-
             _render() {
                 this._state.visibleCalendar.isCurrentMonth() ?
                 this._els.prev.classList.add('invisible')
                 : this._els.prev.classList.remove('invisible');
-                //this._els.prev.disabled = this._state.visibleCalendar.isCurrentMonth();
                 
                 this._els.calendars.children[0].value = this._state.visibleCalendar;
                 this._els.calendars.children[1].value = this._state.visibleCalendar.nextMonth();               
@@ -150,18 +132,20 @@
 
             //----- getters and setters
 
-            /**
-             * @param {Date} val
-             */
+            get startDate() {
+                return this._state.startDate;
+            }
+
+            get endDate() {
+                return this._state.endDate;
+            }
+
             set startDate(val) {
                 this._state.startDate = val;
                 this._state.endDate = null;
                 this._updateCalendarDates();
             }
 
-            /**
-             * @param {Date} val
-             */
             set endDate(val) {
                 this._state.endDate = val;
                 this._updateCalendarDates();

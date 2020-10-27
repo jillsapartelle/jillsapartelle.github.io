@@ -3,30 +3,14 @@
 
 (function(){
 
-    let d = document;
+    function doGet() {
+        var bookingsApi = 'https://script.google.com/macros/s/AKfycbwRysi8MRUhDclWkI9xRlZQGPfiiwkOaZW8Y3tLvMR9UEH4Un0/exec';
+        fetch(bookingsApi)
+        .then(d => d.json())
+        .then(d => console.log(d[0].status));
+    }
 
-    /*****
-    hotelres.modalController.init({
-        modalBackground: d.getElementById('modalBackground')
-       ,modalBtnClose: d.getElementById('modalBtnClose')
-   }, true);
-   *****/
-   /*****
-    hotelres.calendarController.init({
-         calStart: d.getElementById('calStart')
-        ,calEnd: d.getElementById('calEnd')
-        ,calIconCheckIn: d.getElementById('calIconCheckIn')
-        ,calIconCheckOut: d.getElementById('calIconCheckOut')
-        ,checkInSelect: d.getElementById('checkInSelect')
-        ,checkOutSelect: d.getElementById('checkOutSelect')
-        ,modalCalendarsContainer: d.getElementById('modalCalendarsContainer')
-        ,modalBackground: d.getElementById('modalBackground')
-        ,checkInContainer: d.getElementById('checkInContainer')
-        ,checkOutContainer: d.getElementById('checkOutContainer')
-    });
-    *****/
-
-
+    doGet();
          
 })();
 

@@ -2,7 +2,6 @@ calendar-carousel-component {
     display: flex;
     flex-direction: column;
     justify-content: center;  
-    background-color: ivory;
 }
 
 
@@ -32,35 +31,6 @@ calendar-carousel-component .prev-next .prev {
 calendar-carousel-component .prev-next .next {
     transform: rotate(-45deg);
 }
-/*****
-calendar-carousel-component .prev-next button::before {
-    content: "";
-    border: 0.2rem solid black;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    top: -0.55rem;
-    left: -0.55rem;
-}
-*****/
-
-calendar-carousel-component .close-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: 1.25rem;
-}
-
-calendar-carousel-component .close-container > button {
-    border: 0;
-    background: none;
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    outline: none;
-}
 
 calendar-carousel-component .calendars {
     margin-top: -1.5rem;
@@ -74,9 +44,5 @@ calendar-carousel-component .calendars {
 /* the calendars display in a row */
 @media only screen and (min-width: 42.2rem)
 {
-    calendar-carousel-component .prev-next {
-        .width: calc(2 * var(--calendar-width));
-    }
-
 
 }

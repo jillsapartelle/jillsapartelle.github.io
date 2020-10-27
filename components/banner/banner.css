@@ -1,0 +1,47 @@
+banner-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+banner-component .banner-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+banner-component .banner {
+	font-family: LobsterRegular;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding-left: 5px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: darkgoldenrod;
+}
+
+banner-component .location {
+	font-family: SyneRegular;
+	font-size: 1rem;
+	color: goldenrod;
+	width: 100%;
+	background-color: black;
+
+	display: flex;
+	justify-content: center;
+}
+
+banner-component .address {
+	color: #4d4d4d;
+    font-size: 0.4rem;
+    width: 8rem;
+}
+
+banner-component .address > div {
+	display: flex;
+	flex-direction: column;
+}
