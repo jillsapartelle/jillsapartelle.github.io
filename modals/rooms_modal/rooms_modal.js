@@ -64,8 +64,23 @@
             return template.content.cloneNode(true);
         }
 
+        _clearRooms() {
+            let children = this._els.roomsSection.children;
+            let i = children.length - 1;
+            while(i >= 0) {
+                if(children[i] !== this._els.okContainer) {
+                    children[i].remove();
+                }
+                i--;
+            }
+
+        }
+
         //----- public methods
         async updateAvailableRooms() {
+
+            this._clearRooms();
+
             let rooms = await window.api.rooms.doGet();
             rooms.forEach(room => {
                 //this._els.roomsSection.appendChild(this._getRoomNode(room));
