@@ -2,7 +2,7 @@
 
     const template = document.createElement('template');
     template.innerHTML = `
-        <section class="rooms">
+        <section class="rooms bottom-margin">
             <div class="select-room with-icon">
                 <img src="icons/night_shelter-24px.svg">
                 <span>Available Rooms</span>

@@ -2,11 +2,11 @@
 
     const template = document.createElement('template');
     template.innerHTML = `
-        <section class="guest-details">
-        <div class="with-icon">
-            <img src="icons/perm_identity-24px.svg">
-            <span>Please enter your details</span>
-        </div>
+        <section class="guest-details bottom-margin">
+            <div class="with-icon bottom-margin">
+                <img src="icons/perm_identity-24px.svg">
+                <span>Please enter your details</span>
+            </div>
         
             <div class="detail">
                 <div class="detail-input">

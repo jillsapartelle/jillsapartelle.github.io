@@ -3,11 +3,11 @@
     const template = document.createElement('template');
     template.innerHTML = `
         <section class="dates-guests">
-            <div class="select-dates with-icon clickable">
+            <div class="select-dates with-icon clickable bottom-margin">
                 <img src="icons/date_range-24px.svg">
                 <span>Select dates</span>
             </div>
-            <div class="select-guest-count with-icon clickable">
+            <div class="select-guest-count with-icon clickable bottom-margin">
                 <img src="icons/portrait-24px.svg">
                 <span>Number of guests</span>
             </div>

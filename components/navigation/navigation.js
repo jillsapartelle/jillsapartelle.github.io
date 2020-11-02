@@ -1,9 +1,10 @@
 (function(){
     const template = document.createElement('template');
-    template.innerHTML = `<div class="nav-container">
-        <div class="nav-icon"></div>
-        <div class="nav-entries"></div>
-    </div>`;
+    template.innerHTML = `
+        <section class="nav-container bottom-margin">
+            <div class="nav-icon"></div>
+            <div class="nav-entries"></div>
+        </section>`;
 
     class Navigation extends HTMLElement {
         
