@@ -23,7 +23,6 @@
 }
 
 html, body{
-	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	font-family: VarelaRound;
 	font-size: 16px;
@@ -49,6 +48,7 @@ body > header, body > main, body > footer {
 	margin: 0 auto;
 
 	max-width: 48rem;
+	padding: 1rem;
 }
 
 body > header {
