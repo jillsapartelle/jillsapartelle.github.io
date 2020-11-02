@@ -16,6 +16,7 @@
         els.guestsModal.addEventListener('onOk', onGuestsModalOk);
 
         els.roomsComponent.addEventListener('selectRoomClicked', onSelectRoom);
+        els.roomsModal.addEventListener('onOk', onRoomsSelected);
     }
 
     function onCalendarOk(evt) {
@@ -36,6 +37,10 @@
     function onSelectRoom(evt) {
         els.roomsModal.updateAvailableRooms();
         els.roomsModal.classList.remove('hidden');
+    }
+
+    function onRoomsSelected(evt) {
+        els.roomsModal.classList.add('hidden');
     }
 
     function onGuestsModalOk(evt) {

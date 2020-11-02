@@ -23,14 +23,25 @@
             this._els = {
                  roomsSection: this.querySelector('.rooms-section')
                 ,okContainer: this.querySelector('.ok-container')
+                ,btnOk: this.querySelector('.button-ok')
             };
+
+            this._addEventListeners();
         }
 
         disconnectedCallback() {
 
         }
 
+        _onOk(evt) {
+            this.dispatchEvent(new CustomEvent('onOk', {detail:{}}));
+        }
+
         //----- private methods
+        _addEventListeners() {
+            this._els.btnOk.addEventListener('click', this._onOk.bind(this));
+        }
+
         _getRoomNode(room) {
             template.innerHTML = `
                 <div class="room">
