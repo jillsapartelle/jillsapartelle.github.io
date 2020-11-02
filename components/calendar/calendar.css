@@ -40,6 +40,30 @@ calendar-component .month-table td{
     -webkit-user-select: none;
 }
 
+.start-end-calendar-container {
+	display: flex;
+    justify-content: center;
+}
+
+.start-end-calendar-container > div {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.start-end-calendar-container span {
+	font-size: 0.75rem;
+}
+
+.start-end-calendar-container .noSelectedDate {
+	color: #b7c7cc;
+}
+
+.start-end-calendar-container .withSelectedDate {
+	color: darkblue;
+}
+
 .current-date {
 	text-decoration: underline;
 	font-weight: bolder;

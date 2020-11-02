@@ -28,6 +28,8 @@
             };
 
             this._addEventListeners();
+
+            this._state = {};
         }
 
         disconnectedCallback() {
@@ -49,11 +51,23 @@
         }
 
         set selectedDates(val) {
-            this._els.selectDatesDisplay.innerText = `${val.startDate.toCustomString()} - ${val.endDate.toCustomString()}`
+            if(val && val.startDate && val.endDate) {
+                this._els.selectDatesDisplay.innerText = `${val.startDate.toCustomString()} - ${val.endDate.toCustomString()}`;
+                this._state.selectedDates = val;
+            }
         }
 
         set guestCount(val) {
             this._els.selectGuestCount.innerText = `${val.adults} Adults, ${val.children} Children`;
+            this._state.guestCount = val;
+        }
+
+        get selectedDates() {
+            return this._state.selectDates;
+        }
+
+        get guestCount() {
+            return this._state.guestCount;
         }
     }
 

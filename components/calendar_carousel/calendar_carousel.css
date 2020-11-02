@@ -33,7 +33,6 @@ calendar-carousel-component .prev-next .next {
 }
 
 calendar-carousel-component .calendars {
-    margin-top: -1.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

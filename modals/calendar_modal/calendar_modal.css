@@ -1,15 +1,4 @@
-calendar-modal .calendar-container {
+calendar-modal .modal-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: ivory;
-}
-
-calendar-modal .ok-container {
-    display: flex;
-    justify-content: center;
-}
-
-calendar-modal .button-ok {
-    width: 6rem;
 }

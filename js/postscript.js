@@ -13,10 +13,9 @@
     function doPost() {
         const bookingsApi = 'https://script.google.com/macros/s/AKfycbwRysi8MRUhDclWkI9xRlZQGPfiiwkOaZW8Y3tLvMR9UEH4Un0/exec';
         let row = {
-            bookingId:'100',
-            bookingDate:'20201027',
             plannedCheckInDate:'20201101',
             plannedCheckoutDate:'20201102',
+            room: '1A',
             adultCount:'1',
             childrenCount:'2', 
             firstname:'juan',
@@ -37,12 +36,14 @@
             body: JSON.stringify(row)
         });
     }
-
+    
+    /***** 
     doGet();
 
     document.getElementById('btnSend').addEventListener('click', function(){
         doPost();
     });
+    *****/
          
 })();
 

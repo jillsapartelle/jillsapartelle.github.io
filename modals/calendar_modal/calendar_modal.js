@@ -4,7 +4,7 @@
     template.innerHTML = `
         <div class="overlay">
 
-            <div class="calendar-container">
+            <div class="modal-content panel">
         
                 <section class="start-end-calendar-container" >
 

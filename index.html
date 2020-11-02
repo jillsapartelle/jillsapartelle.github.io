@@ -12,23 +12,31 @@
 	<link rel="stylesheet" type="text/css" href="components/navigation/navigation.css">
 	<link rel="stylesheet" type="text/css" href="components/banner/banner.css">
 	<link rel="stylesheet" type="text/css" href="modals/calendar_modal/calendar_modal.css">
+	<link rel="stylesheet" type="text/css" href="components/rooms/rooms.css">
+	<link rel="stylesheet" type="text/css" href="components/guest_details/guest_details.css">
 	<link rel="stylesheet" type="text/css" href="modals/guests_modal/guests_modal.css">
-
-	
+	<link rel="stylesheet" type="text/css" href="modals/rooms_modal/rooms_modal.css">
 
 	<script src="js/script.js"></script>
 	<script src="js/enums.js"></script>
 	<script src="js/date_extension.js"></script>
+
+	<script src="services/bookingApi.js"></script>
+	<script src="services/roomsApi.js"></script>
+
 	<script src="components/calendar/calendar.js"></script>
 	<script src="components/calendar_icon/calendar_icon.js"></script>
 	<script src="components/calendar_carousel/calendar_carousel.js"></script>
 	<script src="components/navigation/navigation.js"></script>
 	<script src="components/banner/banner.js"></script>
 	<script src="modals/calendar_modal/calendar_modal.js"></script>
+	<script src="components/rooms/rooms.js"></script>
+	<script src="components/guest_details/guest_details.js"></script>
 	<script src="modals/guests_modal/guests_modal.js"></script>
 	<script src="components/booking_info/booking_info.js"></script>
+	<script src="modals/rooms_modal/rooms_modal.js"></script>
 	
-	
+
 </head>
 <body>
 
@@ -40,55 +48,29 @@
 
 	<main>
 
-		<!-- bookingInfo -->
+		<!-- Image carousel -->
+
+		<!-- bookingInfoController -->
 		<calendar-modal id="calendarModal" class="hidden"></calendar-modal>
 		<guests-modal id="guestsModal" class="hidden"></guests-modal>
 		<booking-info-component id="bookingInfoComponent"></booking-info-component>
-			
-			<section class="rooms">
-				<header><img src="icons/night_shelter-24px.svg">Available Rooms</header>
-			</section>
 
-			<form name="guest-form">
-			<section class="guest-details">
-				<header><img src="icons/perm_identity-24px.svg">Please enter your details</header>
-				
-					<div class="detail">
-						<div class="detail-input">
-							<label for="firstname">First name</label>
-							<input name="firstname" type="text" placeholder="First name">
-						</div>
-						<div class="detail-input">
-							<label for="lastname">Last name</label>
-							<input name="lastname" type="text" placeholder="Last name">
-						</div>
+		<!-- roomsController -->
+		<rooms-modal id="roomsModal" class="hidden"></rooms-modal>
+		<rooms-component id="roomsComponent"></rooms-component>	
 
-					</div>
+		<guest-details-component id="guestDetailsComponent"></guest-details-component>
 
-					<div class="detail">
-						<div class="detail-input">	
-							<label for="phone">Phone</label>
-							<input name="phone" type="text" placeholder="Phone/Mobile number">
-						</div>
-						<div class="detail-input">	
-							<label for="email">Email</label>
-							<input name="email" type="email" placeholder="Email">
-						</div>
-					</div>
-
-				
-			</section>
-
-			<section class="submit-container">
-				<button id="btnSubmit" class="panel">Reserve now</button>
-			</section>
-		</form>
-			
-		<button id="btnSend">Send</button>
+		<section class="submit-container">
+			<button id="btnReserve" class="panel">Reserve now</button>
+		</section>
+		
+	
 	</main>
 	<footer></footer>
 
-	<script src="controller/bookingInfoController.js"></script>
+	<script src="pages/homepage.js"></script>
+
 	<script src="js/app.js"></script>
 	<script src="js/postscript.js"></script>
 

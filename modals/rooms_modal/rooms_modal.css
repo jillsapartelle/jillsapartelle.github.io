@@ -1,0 +1,31 @@
+rooms-modal {
+    padding: 2rem;
+}
+
+rooms-modal .rooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+rooms-modal .room {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+rooms-modal .room img {
+    width: 80%;
+}
+
+rooms-modal .with-icon img {
+    width: 2rem;
+}
+
+rooms-modal .room-properties {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
