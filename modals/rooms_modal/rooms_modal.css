@@ -40,3 +40,9 @@ rooms-modal .room-properties > span {
 rooms-modal .room-properties > div {
     margin-right: 1.5rem;
 }
+
+rooms-modal .ok-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

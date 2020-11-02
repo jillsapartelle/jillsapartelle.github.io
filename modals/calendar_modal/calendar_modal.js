@@ -74,11 +74,14 @@
         }
 
         _onClickBtnOk(evt) {
+            evt.preventDefault();
+
             let data = {
                 startDate: this._els.carousel.startDate,
                 endDate: this._els.carousel.endDate
             };
             this.dispatchEvent(new CustomEvent('onOk', {detail:data}));
+            return false;
         }
 
         _onClickCheckInSelect(evt) {
