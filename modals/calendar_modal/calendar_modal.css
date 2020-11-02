@@ -2,3 +2,9 @@ calendar-modal .modal-content{
     display: flex;
     flex-direction: column;
 }
+
+calendar-modal .ok-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

@@ -3,7 +3,7 @@
     const template = document.createElement('template');
     template.innerHTML = `
         <div class="overlay">
-            <section class="rooms-section">
+            <section class="rooms-section modal-content panel">
             </section>
         </div>
     `;
@@ -34,7 +34,7 @@
                         <div class="with-icon">
                             <img src="icons/group-24px.svg">
                             <span>${room.Occupancy}</span>
-                        <div>
+                        </div>
                         <div class="with-icon">
                             <img src="icons/settings_overscan-24px.svg">
                             <span>${room.Size}</span>

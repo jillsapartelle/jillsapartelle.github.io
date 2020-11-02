@@ -1,5 +1,7 @@
-rooms-modal {
-    padding: 2rem;
+rooms-modal .rooms-section{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
 }
 
 rooms-modal .rooms {
@@ -15,11 +17,12 @@ rooms-modal .room {
 }
 
 rooms-modal .room img {
-    width: 80%;
+    width: 100%;
 }
 
 rooms-modal .with-icon img {
-    width: 2rem;
+    width: 1rem;
+    margin-right: 3px;
 }
 
 rooms-modal .room-properties {
@@ -28,4 +31,12 @@ rooms-modal .room-properties {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+rooms-modal .room-properties > span {
+    margin-right: 2rem;
+}
+
+rooms-modal .room-properties > div {
+    margin-right: 1.5rem;
 }
